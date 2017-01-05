@@ -1,2 +1,4 @@
 # vis-demo-utils
-Boilerplate JS, needed by vis demos to run from GH pages
+JS utils needed by Refinery vis demos
+
+[demo](http://refinery-project.github.io/vis-demo-utils)
