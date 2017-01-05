@@ -15,6 +15,23 @@
     "baseUrl": "src"
   });
 
+  requirejs.default_paths = function (defaults) {
+    /*
+     In production environments, better to have dependencies checked in,
+     but in development easier to rely on defaults from free CDNs.
+     */
+    var configured = requirejs.s.contexts._.config.paths; // No public API. :(
+    for (key in defaults) {
+      if (!configured[key]) {
+        var paths = {};
+        paths[key] = defaults[key];
+        requirejs.config({
+          paths: paths
+        });
+      }
+    }
+  };
+
   function parse_query() {
     // From http://stackoverflow.com/a/8486188
     var query = location.search.substr(1).replace('%5B', '[').replace('%5D', ']');
