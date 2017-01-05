@@ -17,7 +17,7 @@
 
   function parse_query() {
     // From http://stackoverflow.com/a/8486188
-    var query = location.search.substr(1);
+    var query = location.search.substr(1).replace('%5B', '[').replace('%5D', ']');
     var result = {};
     query.split("&").forEach(function (part) {
       if (!part) return;
