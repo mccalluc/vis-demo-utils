@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <title>vis-demo-utils</title>
+</head>
+<body>
+<p>
+    For Refinery visualizations to run from GH Pages, some boilerplate is required.
+    This project provides a single file, <code>utils.js</code>,
+    which when included sets up error handling, parses the url,
+    and dispatches to the specified vis.
+</p>
+<p>
+    In production, all the same things need to be done, but they will probably be done
+    differently: requirejs and other dependencies will be local copies instead of pulled
+    from a CDN, and errors might be logged to the server. The code here might serve as
+    a checklist, but should not be copied verbatim into Refinery.
+</p>
+<ul>
+    <li><a href="?vis=demo&single_param=single&list_param[]=1&list_param[]=2">"vis" parameter provided</a></li>
+    <li><a href="?">"vis" parameter missing</a></li>
+</ul>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.2/require.min.js"
+        data-main="src/utils.js"></script>
+
+</body>
+</html>
