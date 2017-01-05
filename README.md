@@ -1,4 +1,4 @@
 # vis-demo-utils
 JS utils needed by Refinery vis demos
 
-[demo](http://refinery-project.github.io/vis-demo-utils)
+[demo](https://refinery-platform.github.io/vis-demo-utils/?vis=demo&key=value)
