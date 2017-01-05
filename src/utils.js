@@ -25,6 +25,8 @@
       if (!configured[key]) {
         var paths = {};
         paths[key] = defaults[key];
+        // In production: paths[key] = 'provide-local-copy-of://' + defaults[key];
+        // That way you can't accidentally use CDNs in production.
         requirejs.config({
           paths: paths
         });
